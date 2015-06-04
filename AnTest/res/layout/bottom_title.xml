@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/set_title" >
+
+    <LinearLayout
+        android:id="@+id/a"
+        style="@style/set_layout"
+        android:layout_marginLeft="25dp" >
+
+        <ImageView
+            android:id="@+id/btn_a"
+            style="@style/set_btn"
+            android:background="@drawable/alb" />
+
+        <TextView
+            android:id="@+id/txt_a"
+            style="@style/set_txt"
+            android:text="A"
+            android:textColor="#45C01A" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/b"
+        style="@style/set_layout" >
+
+        <ImageView
+            android:id="@+id/btn_b"
+            style="@style/set_btn"
+            android:background="@drawable/ala" />
+
+        <TextView
+            android:id="@+id/txt_b"
+            style="@style/set_txt"
+            android:text="B" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/c"
+        style="@style/set_layout" >
+
+        <ImageView
+            android:id="@+id/btn_c"
+            style="@style/set_btn"
+            android:background="@drawable/ale" />
+
+        <TextView
+            android:id="@+id/txt_c"
+            style="@style/set_txt"
+            android:text="C" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/d"
+        style="@style/set_layout" >
+
+        <ImageView
+            android:id="@+id/btn_d"
+            style="@style/set_btn"
+            android:background="@drawable/alg" />
+
+        <TextView
+            android:id="@+id/txt_d"
+            style="@style/set_txt"
+            android:text="D" />
+    </LinearLayout>
+
+</LinearLayout>
