@@ -8,11 +8,16 @@ import org.json.JSONObject;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.ListView;
 
 public class MainActivity extends Activity implements HttpGetDataListener {
 
 	private HttpData httpData;
 	private List< DataEntity> list;
+	private ListView lv;
+	private EditText edtText;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +30,18 @@ public class MainActivity extends Activity implements HttpGetDataListener {
 				"http://www.tuling123.com/openapi/api?key=54cef338a3324c16a39d4343078b46ba&info=北京今天天气",
 				this);
 		httpData.execute();
+		
+		initView();
+	}
+	
+	private void initView() {
+		lv=(ListView) findViewById(R.id.lv);
+		edtText=(EditText) findViewById(R.id.edt_info);
+
+	}
+	
+	public void onClick_send(View view){
+		
 	}
 	
 	
