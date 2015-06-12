@@ -81,7 +81,7 @@
         android:id="@+id/txt_find_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="onClick_find_password"
+       
         android:layout_gravity="end"
         android:layout_marginRight="@dimen/small4"
         android:layout_marginTop="@dimen/small1"

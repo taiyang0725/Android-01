@@ -12,10 +12,20 @@ import com.anxiong.db.Person;
 
 public class LoginActivity extends BaseActivity {
 
-	private List<Person> listUserName;
-	private List<Person> listPassword;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		txtFindpassword.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				find_password();
+			}
+		});
+	}
 
-	
 	public void onClick_login(View view) {
 
 		showLog("loginName:" + loginName + ",loginPassword:" + loginPassword);
@@ -25,11 +35,10 @@ public class LoginActivity extends BaseActivity {
 
 		List<Person> listUserName = DataSupport.select("userName")
 				.where("userName=?", loginName).find(Person.class);
-		
+
 		if (listUserName.size() == 0) {
 			showToast("登陆的账号不正确或不存在!");
 		} else {
-			System.out.println(listPassword);
 			List<Person> listPassword = DataSupport
 					.select("password")
 					.where("userName = ? and password = ?", loginName,
@@ -38,9 +47,6 @@ public class LoginActivity extends BaseActivity {
 				showToast("密码不正确!");
 			} else {
 				System.out.println(listPassword.get(0).getPassword());
-				showdialog("登录中");
-				sleeps(500);
-				progressDialog.dismiss();
 				showToast("登陸成功!");
 				hideView();
 				layout_main.setVisibility(View.VISIBLE);
@@ -50,14 +56,19 @@ public class LoginActivity extends BaseActivity {
 
 	}
 
-	public void onClick_find_password(View view) {
+	public void find_password() {
+
+		loginName = edtLoginUserName.getText().toString();
 		
-		
-		
-		
+		List<Person> listUserName = DataSupport.select("userName")
+				.where("userName=?", loginName).find(Person.class);
+
 		if (listUserName.size() == 0) {
 			showToast("登陆的账号不正确或不存在!");
 		} else {
+			List<Person> listPassword = DataSupport.select("password")
+					.where("userName = ? ", loginName).find(Person.class);
+
 			new AlertDialog.Builder(this)
 					.setTitle("详细信息")
 					.setMessage(

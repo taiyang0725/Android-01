@@ -94,7 +94,5 @@ public class BaseActivity extends Activity {
 		Log.d("AnXiong", text);
 	}
 
-	protected void showdialog(String text) {
-		progressDialog = new ProgressDialog(this).show(this, text, "µÈ´ý......");
-	}
+	
 }

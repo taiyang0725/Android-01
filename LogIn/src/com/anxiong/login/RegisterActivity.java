@@ -4,12 +4,19 @@ import java.util.List;
 
 import org.litepal.crud.DataSupport;
 
+import android.os.Bundle;
 import android.view.View;
 
 import com.anxiong.db.Person;
 
 public class RegisterActivity extends LoginActivity {
 	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		System.out.println("++++---------------------------------------------");
+	}
 
 	public void onClick_register_register(View view) {
 		
@@ -40,10 +47,9 @@ public class RegisterActivity extends LoginActivity {
 					person.setUserName(registerName);
 					person.setPassword(regPassword);
 					person.save();
-					showdialog("‘]É‘÷–");
-					sleeps(500);
-					progressDialog.dismiss();
 					showToast("‘]É‘≥…π¶!");
+					hideView();
+					layout_main.setVisibility(View.VISIBLE);
 
 				}
 			
