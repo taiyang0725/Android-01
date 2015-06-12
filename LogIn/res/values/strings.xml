@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">LogIn</string>
+    <string name="log_in">登陆</string>
+    <string name="no_log_in">登陆</string>
+    <string name="yi_log_in">登陆</string>
+ 
+    <string name="log_in_hint3">密码  6-12个字符</string>
+    <string name="log_in_hint4">再次输入密码 </string>
+    <string name="set_error_name">6-12个字符 </string>
+ 
+    <string name="pwd_pwd">两次密码不一样 </string>
+   
+    
+    <string name="log_in_password">密码</string>
+    <string name="find_password">找回密码</string>
+    <string name="sign_up_new">注册新用户</string>
+    <string name="sign_up_log_in">注册并登陆</string>
+ 
+   
+
+</resources>
